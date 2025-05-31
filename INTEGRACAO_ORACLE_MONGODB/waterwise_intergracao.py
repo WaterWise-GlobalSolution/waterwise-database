@@ -24,17 +24,6 @@ ORACLE_CONFIG = {
     'password': '150592'
 }
 
-# Conexão
-connection = oracledb.connect(
-    user=ORACLE_CONFIG['user'],
-    password=ORACLE_CONFIG['password'],
-    host=ORACLE_CONFIG['host'],
-    port=ORACLE_CONFIG['port'],
-    service_name=ORACLE_CONFIG['service']
-)
-
-
-
 # Configurações MongoDB
 MONGO_CONFIG = {
     'host': 'localhost',
@@ -48,28 +37,13 @@ MONGO_CONFIG = {
 # ============================================================================
 
 @st.cache_resource
-def connect_oracle():
-    """Conectar ao Oracle"""
-    try:
-        connection = oracledb.connect(
-            user=ORACLE_CONFIG['user'],
-            password=ORACLE_CONFIG['password'],
-            host=ORACLE_CONFIG['host'],
-            port=ORACLE_CONFIG['port'],
-            service_name=ORACLE_CONFIG['service']
-        )
-        return connection
-    except Exception as e:
-        st.error(f"Erro ao conectar Oracle: {e}")
-        return None
-
-
-@st.cache_resource
 def connect_mongodb():
     """Conectar ao MongoDB"""
     try:
         client = MongoClient(MONGO_CONFIG['host'], MONGO_CONFIG['port'])
         db = client[MONGO_CONFIG['database']]
+        # Teste a conexão fazendo uma operação simples
+        db.list_collection_names()
         return db
     except Exception as e:
         st.error(f"Erro ao conectar MongoDB: {e}")
@@ -80,14 +54,73 @@ def connect_mongodb():
 # FUNÇÕES ORACLE
 # ============================================================================
 
-def execute_oracle_procedure(procedure_name, **params):
-    """Executar procedure da PKG_WATERWISE"""
-    conn = connect_oracle()
-    if not conn:
+def find_column_name(df, possible_names):
+    """Encontra o nome correto da coluna independente do caso"""
+    for name in possible_names:
+        if name in df.columns:
+            return name
+    return None
+
+
+def test_oracle_connection():
+    """Testar conexão Oracle com uma consulta simples"""
+    try:
+        connection = oracledb.connect(
+            user=ORACLE_CONFIG['user'],
+            password=ORACLE_CONFIG['password'],
+            host=ORACLE_CONFIG['host'],
+            port=ORACLE_CONFIG['port'],
+            service_name=ORACLE_CONFIG['service']
+        )
+
+        cursor = connection.cursor()
+        cursor.execute("SELECT 1 FROM DUAL")
+        result = cursor.fetchone()
+        cursor.close()
+        connection.close()
+
+        return result is not None
+
+    except Exception as e:
+        st.error(f"Erro ao testar conexão Oracle: {e}")
         return False
 
+
+def get_oracle_data(query):
+    """Executar consulta Oracle"""
     try:
-        cursor = conn.cursor()
+        # Criar nova conexão para cada consulta
+        connection = oracledb.connect(
+            user=ORACLE_CONFIG['user'],
+            password=ORACLE_CONFIG['password'],
+            host=ORACLE_CONFIG['host'],
+            port=ORACLE_CONFIG['port'],
+            service_name=ORACLE_CONFIG['service']
+        )
+
+        df = pd.read_sql(query, connection)
+        connection.close()
+        return df
+
+    except Exception as e:
+        st.error(f"Erro na consulta Oracle: {e}")
+        return pd.DataFrame()
+
+
+def execute_oracle_procedure(procedure_name, **params):
+    """Executar procedure da PKG_WATERWISE"""
+    try:
+        # Criar nova conexão para cada procedure
+        connection = oracledb.connect(
+            user=ORACLE_CONFIG['user'],
+            password=ORACLE_CONFIG['password'],
+            host=ORACLE_CONFIG['host'],
+            port=ORACLE_CONFIG['port'],
+            service_name=ORACLE_CONFIG['service']
+        )
+
+        cursor = connection.cursor()
+
         if params:
             param_str = ", ".join([f"{k} => :{k}" for k in params.keys()])
             sql = f"BEGIN PKG_WATERWISE.{procedure_name}({param_str}); END;"
@@ -96,54 +129,59 @@ def execute_oracle_procedure(procedure_name, **params):
             sql = f"BEGIN PKG_WATERWISE.{procedure_name}; END;"
             cursor.execute(sql)
 
-        conn.commit()
+        connection.commit()
         cursor.close()
+        connection.close()
         return True
+
     except Exception as e:
         st.error(f"Erro ao executar {procedure_name}: {e}")
         return False
 
 
-def get_oracle_data(query):
-    """Executar consulta Oracle"""
-    conn = connect_oracle()
-    if not conn:
-        return pd.DataFrame()
-
-    try:
-        df = pd.read_sql(query, conn)
-        return df
-    except Exception as e:
-        st.error(f"Erro na consulta: {e}")
-        return pd.DataFrame()
-
-
 def get_dashboard_metrics():
     """Obter métricas do dashboard"""
+    # Primeira tentativa: consulta completa
     query = """
         SELECT 
-            COUNT(DISTINCT pr.id_propriedade) as propriedades,
-            COUNT(DISTINCT si.id_sensor) as sensores,
-            COUNT(DISTINCT a.id_alerta) as alertas_hoje,
-            ROUND(AVG(ls.umidade_solo), 1) as umidade_media
+            COUNT(DISTINCT pr.id_propriedade) as PROPRIEDADES,
+            COUNT(DISTINCT si.id_sensor) as SENSORES,
+            COUNT(DISTINCT a.id_alerta) as ALERTAS_HOJE,
+            ROUND(AVG(ls.umidade_solo), 1) as UMIDADE_MEDIA
         FROM GS_WW_PROPRIEDADE_RURAL pr
         LEFT JOIN GS_WW_SENSOR_IOT si ON pr.id_propriedade = si.id_propriedade
         LEFT JOIN GS_WW_LEITURA_SENSOR ls ON si.id_sensor = ls.id_sensor
             AND ls.timestamp_leitura >= TRUNC(SYSDATE)
         LEFT JOIN GS_WW_ALERTA a ON a.timestamp_alerta >= TRUNC(SYSDATE)
     """
-    return get_oracle_data(query)
+
+    df = get_oracle_data(query)
+
+    # Se a consulta complexa falhar, tenta uma simples
+    if df.empty:
+        st.warning("⚠️ Consulta complexa falhou, tentando consulta simples...")
+        simple_query = """
+            SELECT 
+                COUNT(*) as PROPRIEDADES,
+                0 as SENSORES,
+                0 as ALERTAS_HOJE,
+                0 as UMIDADE_MEDIA
+            FROM GS_WW_PROPRIEDADE_RURAL
+        """
+        df = get_oracle_data(simple_query)
+
+    return df
 
 
 def get_propriedades():
     """Obter lista de propriedades"""
     query = """
         SELECT 
-            pr.id_propriedade as "ID",
-            pr.nome_propriedade as "Propriedade",
-            prod.nome_completo as "Produtor",
-            pr.area_hectares as "Área (ha)",
-            nd.descricao_degradacao as "Estado do Solo"
+            pr.id_propriedade as ID,
+            pr.nome_propriedade as PROPRIEDADE,
+            prod.nome_completo as PRODUTOR,
+            pr.area_hectares as AREA_HA,
+            nd.descricao_degradacao as ESTADO_SOLO
         FROM GS_WW_PROPRIEDADE_RURAL pr
         JOIN GS_WW_PRODUTOR_RURAL prod ON pr.id_produtor = prod.id_produtor
         JOIN GS_WW_NIVEL_DEGRADACAO_SOLO nd ON pr.id_nivel_degradacao = nd.id_nivel_degradacao
@@ -155,13 +193,19 @@ def get_propriedades():
 def get_alertas_severidade():
     """Obter alertas por severidade"""
     query = """
-        SELECT ns.codigo_severidade, COUNT(a.id_alerta) as total
+        SELECT ns.codigo_severidade as CODIGO_SEVERIDADE, COUNT(a.id_alerta) as TOTAL
         FROM GS_WW_ALERTA a
         JOIN GS_WW_NIVEL_SEVERIDADE ns ON a.id_nivel_severidade = ns.id_nivel_severidade
         WHERE a.timestamp_alerta >= SYSDATE - 7
         GROUP BY ns.codigo_severidade
     """
-    return get_oracle_data(query)
+    df = get_oracle_data(query)
+
+    # Se não houver dados, retorna DataFrame vazio mas sem erro
+    if df.empty:
+        st.info("📊 Conectado ao Oracle, mas nenhum alerta encontrado nos últimos 7 dias")
+
+    return df
 
 
 # ============================================================================
@@ -171,7 +215,7 @@ def get_alertas_severidade():
 def log_activity(activity_type, details, user="system"):
     """Registrar atividade no MongoDB"""
     db = connect_mongodb()
-    if not db:
+    if db is None:
         return False
 
     try:
@@ -192,7 +236,7 @@ def log_activity(activity_type, details, user="system"):
 def save_report(report_type, content, metadata):
     """Salvar relatório no MongoDB"""
     db = connect_mongodb()
-    if not db:
+    if db is None:
         return None
 
     try:
@@ -213,7 +257,7 @@ def save_report(report_type, content, metadata):
 def save_image(image_name, image_data, metadata):
     """Salvar imagem no MongoDB"""
     db = connect_mongodb()
-    if not db:
+    if db is None:
         return None
 
     try:
@@ -236,7 +280,7 @@ def save_image(image_name, image_data, metadata):
 def get_recent_logs(limit=50):
     """Obter logs recentes"""
     db = connect_mongodb()
-    if not db:
+    if db is None:
         return []
 
     try:
@@ -252,7 +296,7 @@ def get_recent_logs(limit=50):
 def get_reports(limit=20):
     """Obter relatórios"""
     db = connect_mongodb()
-    if not db:
+    if db is None:
         return []
 
     try:
@@ -289,15 +333,14 @@ def main():
         st.subheader("📡 Status Conexões")
 
         # Oracle
-        oracle_conn = connect_oracle()
-        if oracle_conn:
+        if test_oracle_connection():
             st.success("🟢 Oracle: Conectado")
         else:
             st.error("🔴 Oracle: Desconectado")
 
         # MongoDB
         mongo_db = connect_mongodb()
-        if mongo_db:
+        if mongo_db is not None:
             st.success("🟢 MongoDB: Conectado")
         else:
             st.error("🔴 MongoDB: Desconectado")
@@ -344,22 +387,58 @@ def dashboard_page():
     metrics_df = get_dashboard_metrics()
 
     if not metrics_df.empty:
+        # Debug: mostrar colunas disponíveis
+        st.write("DEBUG - Colunas disponíveis:", metrics_df.columns.tolist())
+
         row = metrics_df.iloc[0]
 
         col1, col2, col3, col4 = st.columns(4)
 
         with col1:
-            st.metric("🏡 Propriedades", int(row['propriedades'] or 0))
+            # Tenta diferentes variações de nome da coluna
+            propriedades = 0
+            for col_name in ['PROPRIEDADES', 'propriedades', 'Propriedades']:
+                if col_name in metrics_df.columns:
+                    propriedades = int(row[col_name] or 0)
+                    break
+            st.metric("🏡 Propriedades", propriedades)
 
         with col2:
-            st.metric("📡 Sensores", int(row['sensores'] or 0))
+            sensores = 0
+            for col_name in ['SENSORES', 'sensores', 'Sensores']:
+                if col_name in metrics_df.columns:
+                    sensores = int(row[col_name] or 0)
+                    break
+            st.metric("📡 Sensores", sensores)
 
         with col3:
-            st.metric("⚠️ Alertas Hoje", int(row['alertas_hoje'] or 0))
+            alertas = 0
+            for col_name in ['ALERTAS_HOJE', 'alertas_hoje', 'Alertas_Hoje']:
+                if col_name in metrics_df.columns:
+                    alertas = int(row[col_name] or 0)
+                    break
+            st.metric("⚠️ Alertas Hoje", alertas)
 
         with col4:
-            umidade = row['umidade_media'] or 0
+            umidade = 0
+            for col_name in ['UMIDADE_MEDIA', 'umidade_media', 'Umidade_Media']:
+                if col_name in metrics_df.columns:
+                    umidade = float(row[col_name] or 0)
+                    break
             st.metric("💧 Umidade Média", f"{umidade:.1f}%")
+    else:
+        st.warning("⚠️ Não foi possível obter métricas do dashboard")
+
+        # Métricas padrão quando não há dados
+        col1, col2, col3, col4 = st.columns(4)
+        with col1:
+            st.metric("🏡 Propriedades", 0)
+        with col2:
+            st.metric("📡 Sensores", 0)
+        with col3:
+            st.metric("⚠️ Alertas Hoje", 0)
+        with col4:
+            st.metric("💧 Umidade Média", "0.0%")
 
     # Gráfico de alertas por severidade
     st.subheader("📈 Alertas por Severidade (Últimos 7 dias)")
@@ -367,14 +446,24 @@ def dashboard_page():
     alertas_df = get_alertas_severidade()
 
     if not alertas_df.empty:
-        fig = px.bar(
-            alertas_df,
-            x='codigo_severidade',
-            y='total',
-            title="Distribuição de Alertas",
-            color='codigo_severidade'
-        )
-        st.plotly_chart(fig, use_container_width=True)
+        # Debug: mostrar colunas disponíveis
+        st.write("DEBUG - Colunas alertas:", alertas_df.columns.tolist())
+
+        # Encontrar nomes corretos das colunas
+        col_severidade = find_column_name(alertas_df, ['CODIGO_SEVERIDADE', 'codigo_severidade', 'Codigo_Severidade'])
+        col_total = find_column_name(alertas_df, ['TOTAL', 'total', 'Total'])
+
+        if col_severidade and col_total:
+            fig = px.bar(
+                alertas_df,
+                x=col_severidade,
+                y=col_total,
+                title="Distribuição de Alertas",
+                color=col_severidade
+            )
+            st.plotly_chart(fig, use_container_width=True)
+        else:
+            st.error(f"❌ Colunas não encontradas. Disponíveis: {alertas_df.columns.tolist()}")
     else:
         st.info("📊 Nenhum alerta nos últimos 7 dias")
 
@@ -399,10 +488,10 @@ def oracle_page():
             st.dataframe(propriedades_df, use_container_width=True)
 
             # Gráfico por estado do solo
-            if 'Estado do Solo' in propriedades_df.columns:
+            if 'ESTADO_SOLO' in propriedades_df.columns:
                 fig = px.pie(
                     propriedades_df,
-                    names='Estado do Solo',
+                    names='ESTADO_SOLO',
                     title="Distribuição por Estado do Solo"
                 )
                 st.plotly_chart(fig, use_container_width=True)

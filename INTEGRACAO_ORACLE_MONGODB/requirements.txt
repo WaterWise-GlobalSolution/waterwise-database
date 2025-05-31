@@ -1,6 +1,6 @@
 streamlit==1.28.0
 pandas==2.0.3
 plotly==5.15.0
-cx-Oracle==8.3.0
+oracledb==2.0.0
 pymongo==4.5.0
 Pillow==10.0.0
