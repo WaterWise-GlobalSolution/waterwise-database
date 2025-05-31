@@ -1,0 +1,184 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<DomainFile class="oracle.dbtools.crest.model.design.DomainFileWrapper" fileName="CREATE_TABLE_FINAL_Domains">
+<domains>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_15" id="0036EB56-C2CD-B8F9-0282-842C9EA2C0A1">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>15</dataTypeSize>
+<fileName>CREATE_TABLE_FINAL_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_20" id="01AF6F3B-20F5-1D2E-779A-74564E2880C1">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>20</dataTypeSize>
+<fileName>CREATE_TABLE_FINAL_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_10_7_0" id="036CAC6C-FBB3-F72A-9484-C39E94DEA740">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>7</dataTypeScale>
+<dataTypeSize>0</dataTypeSize>
+<fileName>CREATE_TABLE_FINAL_Domains</fileName>
+<logicalDatatype>LOGDT019</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_10_2_0" id="16C95B58-B3B8-6585-96CD-8397C0ED4605">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>10</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<dataTypeSize>0</dataTypeSize>
+<fileName>CREATE_TABLE_FINAL_Domains</fileName>
+<logicalDatatype>LOGDT019</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Date_0_0_0" id="1893346E-6AAA-A79A-642B-3028CD6AE8E9">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>CREATE_TABLE_FINAL_Domains</fileName>
+<logicalDatatype>LOGDT007</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_0_0_0" id="38D9D093-16A3-E2C8-5259-4B76B7F1EB16">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<fileName>CREATE_TABLE_FINAL_Domains</fileName>
+<logicalDatatype>LOGDT019</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_150" id="4E4C39FB-F42F-B3AA-46F3-180798D674BE">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>150</dataTypeSize>
+<fileName>CREATE_TABLE_FINAL_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="Timestamp_6_0_0" id="6923FE20-8F26-C4CF-EB2A-B6AC5266671D">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>6</dataTypePrecision>
+<fileName>CREATE_TABLE_FINAL_Domains</fileName>
+<logicalDatatype>LOGDT015</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_200" id="781AE281-5084-03EA-CF7B-906EC72F772B">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>200</dataTypeSize>
+<fileName>CREATE_TABLE_FINAL_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_50" id="8313EC8C-1D71-1EA6-F5F7-7ECFE171551B">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>50</dataTypeSize>
+<fileName>CREATE_TABLE_FINAL_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_100" id="8F5E34D4-0FBC-371D-8B14-972E75296411">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>100</dataTypeSize>
+<fileName>CREATE_TABLE_FINAL_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_500" id="AA8E8CBB-F953-AEF5-A9E6-DA4ECCFA506E">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>500</dataTypeSize>
+<fileName>CREATE_TABLE_FINAL_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="VARCHAR_0_0_18" id="ACB41C9E-FDB4-22A9-26BF-C17925E5E3FD">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>0</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>18</dataTypeSize>
+<fileName>CREATE_TABLE_FINAL_Domains</fileName>
+<logicalDatatype>LOGDT024</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_5_2_0" id="D334989F-E2BE-7F90-4C47-9F5C5F1A9E9D">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>5</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<dataTypeSize>0</dataTypeSize>
+<fileName>CREATE_TABLE_FINAL_Domains</fileName>
+<logicalDatatype>LOGDT019</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_4_1_0" id="D5457809-FDAD-0C6C-BF9A-FA07729BD639">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>4</dataTypePrecision>
+<dataTypeScale>1</dataTypeScale>
+<dataTypeSize>0</dataTypeSize>
+<fileName>CREATE_TABLE_FINAL_Domains</fileName>
+<logicalDatatype>LOGDT019</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_1_0_0" id="E8029218-D7B3-2F02-FC42-288C3EE9746C">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>1</dataTypePrecision>
+<dataTypeScale>0</dataTypeScale>
+<dataTypeSize>0</dataTypeSize>
+<fileName>CREATE_TABLE_FINAL_Domains</fileName>
+<logicalDatatype>LOGDT019</logicalDatatype>
+</Domain>
+<Domain class="oracle.dbtools.crest.model.design.Domain" name="NUMERIC_6_2_0" id="EB908DEE-AB49-B6E3-FCEE-C3570FAA26BB">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<avTSortOrder>0</avTSortOrder>
+<dataTypePrecision>6</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<dataTypeSize>0</dataTypeSize>
+<fileName>CREATE_TABLE_FINAL_Domains</fileName>
+<logicalDatatype>LOGDT019</logicalDatatype>
+</Domain>
+</domains>
+</DomainFile>

@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="C9306651-0EFE-1AD1-B75C-DEBD91253CD3" containerWithKeyObject="4647312B-875A-E753-89B9-3475771F4AA9" localFKIndex="E082A054-2B63-6DEB-8D5A-B260CEC68D4D" name="FK_SENSOR_TIPO">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>112DA6DC-D688-F205-77FC-BBD977204925</importedID>
+<referredTableLongName>GS_WW_TIPO_SENSOR</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>25C7302C-14B2-12FC-CDE3-8A2BB81C4B56</referredTableID>
+<keyObject>627EFD27-2A58-C031-DAA4-03442766E5F8</keyObject>
+<referredKeyID>627EFD27-2A58-C031-DAA4-03442766E5F8</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_TIPO_SENSOR</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

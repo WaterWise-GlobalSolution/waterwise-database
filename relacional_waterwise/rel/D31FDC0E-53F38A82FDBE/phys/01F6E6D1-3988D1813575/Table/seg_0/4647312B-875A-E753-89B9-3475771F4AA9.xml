@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="GS_WW_SENSOR_IOT" directorySegmentName="seg_0" id="4647312B-875A-E753-89B9-3475771F4AA9">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ID_SENSOR" id="180ED54C-C284-A4FA-C919-7FF4A53D3C97">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="MODELO_DISPOSITIVO" id="20E3767D-D4F6-DB17-78D1-3CB52CBACDC2">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_PROPRIEDADE" id="2F5CC39C-BEEC-1E9B-FFF8-90581514E3D5">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DATA_INSTALACAO" id="4B4728EB-1E23-A2EC-D63C-DCD545D50778">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<defaultValue>SYSDATE</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="ID_TIPO_SENSOR" id="E0EBFA76-33C8-351B-74E7-2153A47EC273">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_SENSOR_PROPRIEDADE" id="B4E748DE-B0ED-411D-4957-74DED47A84CA">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_SENSOR_TIPO" id="E082A054-2B63-6DEB-8D5A-B260CEC68D4D">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="GS_WW_SENSOR_IOT_PK" id="D12246ED-D9F2-10B4-35F7-171C74B5A8F5">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

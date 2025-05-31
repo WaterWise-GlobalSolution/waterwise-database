@@ -1,0 +1,70 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="GS_WW_ALERTA" directorySegmentName="seg_0" id="BC3167F8-6A0C-E830-C2DB-89D8C72933CB">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="TIMESTAMP_ALERTA" id="11A4F173-9ED1-644B-FAA1-076EBD68A78F">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<defaultValue>CURRENT_TIMESTAMP</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="ID_ALERTA" id="1D8F4E69-D7A8-0A2A-4726-F0C4A193AF73">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="ID_LEITURA" id="5A1B8ED2-BB95-08E1-650A-60F9C15FE95D">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_NIVEL_SEVERIDADE" id="7DB55BAE-310E-0F17-73B8-84EDD9A512E8">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_PRODUTOR" id="98974030-58DC-37BA-778D-50A9C383BBE6">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DESCRICAO_ALERTA" id="CF140DAD-EC92-7FA7-A84D-BBFDAB4D3C60">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_ALERTA_LEITURA" id="176688F1-F683-8FE5-E8FC-A8EABF161C15">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_ALERTA_SEVERIDADE" id="6FD76496-74D7-4848-52EB-CCD6E576206A">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_ALERTA_PRODUTOR" id="F7B1B787-F722-35E8-CFB1-62F1AFF9C5A5">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="GS_WW_ALERTA_PK" id="104EABE2-860D-47E4-1BB5-AC6AC6DE507D">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

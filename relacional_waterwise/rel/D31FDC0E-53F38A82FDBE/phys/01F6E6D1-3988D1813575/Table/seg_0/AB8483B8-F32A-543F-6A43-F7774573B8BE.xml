@@ -1,0 +1,75 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="GS_WW_PROPRIEDADE_RURAL" directorySegmentName="seg_0" id="AB8483B8-F32A-543F-6A43-F7774573B8BE">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ID_PROPRIEDADE" id="09425C69-4CE8-AC0C-F2CC-2E7CED771A2A">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="LONGITUDE" id="16B503F3-BC10-24FD-24CB-7F7B05043C26">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="DATA_CADASTRO" id="4322AFCD-B24E-FB28-D575-3BE6E3D0E497">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<defaultValue>SYSDATE</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="ID_NIVEL_DEGRADACAO" id="74529528-4554-11A9-5641-7C83B2878020">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_PRODUTOR" id="BB0D5226-9A03-7E69-3C45-1331C5F3DB36">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="NOME_PROPRIEDADE" id="DB77C7F6-0FBF-B7EC-5F99-D7B1E97935C2">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="AREA_HECTARES" id="E6018AB9-2735-616D-99DA-B8B20AF2D87E">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="LATITUDE" id="E901C269-AC78-CA68-40ED-B48A4A8BDB89">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_PROP_DEGRADACAO" id="21CC3243-FA6C-7AED-584F-3E0A02845410">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+</ForeignKey>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_PROP_PRODUTOR" id="232B782B-5CD9-73B3-B729-03427485F29A">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="GS_WW_PROPRIEDADE_RURAL_PK" id="06F3F08B-0534-C3F0-FF90-6EFD7E61EA5B">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

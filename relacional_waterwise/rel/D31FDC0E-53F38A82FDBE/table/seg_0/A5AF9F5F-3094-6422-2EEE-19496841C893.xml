@@ -1,0 +1,130 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A5AF9F5F-3094-6422-2EEE-19496841C893" name="GS_WW_PRODUTOR_RURAL">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>DC5EDD15-0B60-BDA7-1B0E-4C4A1A9E9894</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_PRODUTOR" id="D17794D5-B167-D3D0-B895-DE151CD358C1">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>0286E0C1-E622-80E9-3A9C-92C1139FF339</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>38D9D093-16A3-E2C8-5259-4B76B7F1EB16</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="NOME_COMPLETO" id="84AED766-B037-E310-A306-76CC90505284">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>C58F8A6E-0B50-5616-3BC0-0EC3F316635A</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>8F5E34D4-0FBC-371D-8B14-972E75296411</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="CPF_CNPJ" id="50EB9079-412E-BD8E-1EF8-BD3959F04986">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>F0C36C48-142F-DA4E-9D49-0775E1FF3F12</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>ACB41C9E-FDB4-22A9-26BF-C17925E5E3FD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="EMAIL" id="03E8A0F8-ECF9-9D50-B805-3E5F91971B4E">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>04F55DD8-059B-1207-D5D0-C3710744D130</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>8F5E34D4-0FBC-371D-8B14-972E75296411</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="TELEFONE" id="E097667E-6624-BB5F-AE03-9553E5F41E2C">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>7221FB6B-6823-E9A3-5BB2-527691F47AD5</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>0036EB56-C2CD-B8F9-0282-842C9EA2C0A1</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATA_CADASTRO" id="F3443422-EA11-5716-B4AC-FFD760D14471">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>3F6CC7AB-F5F3-3CD5-43BB-3F15AE40FF18</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>1893346E-6AAA-A79A-642B-3028CD6AE8E9</domain>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5A04ED8D-9F70-D9D2-AFE6-DEA2C88D1030" name="GS_WW_PRODUTOR_RURAL_PK">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>07408680-46F9-08BF-0B39-4C83D9AB4CA1</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D17794D5-B167-D3D0-B895-DE151CD358C1"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="CAE56842-C568-A771-FA23-5C3B849EA31F" name="INDEX_1v2">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>370B9FB6-7FD5-2635-A0B6-055C9960C3C8</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="50EB9079-412E-BD8E-1EF8-BD3959F04986"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="131F9535-DEC3-7203-B64B-E54971B8FEDF" name="INDEX_2">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>B845A6C8-9EED-1BCE-40B7-D154F7383AC3</importedID>
+<indexState>Unique Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="03E8A0F8-ECF9-9D50-B805-3E5F91971B4E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

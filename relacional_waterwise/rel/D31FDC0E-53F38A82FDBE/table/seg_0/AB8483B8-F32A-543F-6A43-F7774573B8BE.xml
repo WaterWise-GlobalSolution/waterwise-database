@@ -1,0 +1,155 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AB8483B8-F32A-543F-6A43-F7774573B8BE" name="GS_WW_PROPRIEDADE_RURAL">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>C82DE8A6-BFD8-9FD9-8DA3-E0AFD4F0A2F8</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_PROPRIEDADE" id="09425C69-4CE8-AC0C-F2CC-2E7CED771A2A">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>51EAC4C4-D04A-579A-05F3-0D3807A931CD</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>38D9D093-16A3-E2C8-5259-4B76B7F1EB16</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="ID_PRODUTOR" id="BB0D5226-9A03-7E69-3C45-1331C5F3DB36">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>BD2382E3-5E52-97A3-0631-8A5C422AE99B</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>38D9D093-16A3-E2C8-5259-4B76B7F1EB16</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B52E11A0-FC70-4C3C-47CC-F8620F4E333A" referredColumn="D17794D5-B167-D3D0-B895-DE151CD358C1"/>
+</associations>
+</Column>
+<Column name="ID_NIVEL_DEGRADACAO" id="74529528-4554-11A9-5641-7C83B2878020">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>DB4931AB-512C-707E-A84D-62F2449F17E6</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>38D9D093-16A3-E2C8-5259-4B76B7F1EB16</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2CE7EA16-7299-63BF-1BD7-56FAA3101D9F" referredColumn="6949D468-D867-4188-16B9-8B8F441080A5"/>
+</associations>
+</Column>
+<Column name="NOME_PROPRIEDADE" id="DB77C7F6-0FBF-B7EC-5F99-D7B1E97935C2">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>78A0FFB1-6E90-9DF7-ACD6-733A77BD54D7</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>8F5E34D4-0FBC-371D-8B14-972E75296411</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LATITUDE" id="E901C269-AC78-CA68-40ED-B48A4A8BDB89">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>C5A9A11C-F37F-3BD1-70D7-C1B1E88C3903</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>036CAC6C-FBB3-F72A-9484-C39E94DEA740</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="LONGITUDE" id="16B503F3-BC10-24FD-24CB-7F7B05043C26">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>1C29AC41-1AD3-7F18-7424-C984CEF575CE</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>036CAC6C-FBB3-F72A-9484-C39E94DEA740</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="AREA_HECTARES" id="E6018AB9-2735-616D-99DA-B8B20AF2D87E">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>56B39BF1-2A3E-056F-1D3D-2F5511E2989A</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>16C95B58-B3B8-6585-96CD-8397C0ED4605</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATA_CADASTRO" id="4322AFCD-B24E-FB28-D575-3BE6E3D0E497">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>88AE1F5D-631F-EDBF-EC45-7A6D541765FE</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>1893346E-6AAA-A79A-642B-3028CD6AE8E9</domain>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="06F3F08B-0534-C3F0-FF90-6EFD7E61EA5B" name="GS_WW_PROPRIEDADE_RURAL_PK">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>FE322388-E621-3D90-D6E0-3DAE52E8FEE1</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="09425C69-4CE8-AC0C-F2CC-2E7CED771A2A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="21CC3243-FA6C-7AED-584F-3E0A02845410" name="FK_PROP_DEGRADACAO">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="74529528-4554-11A9-5641-7C83B2878020"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="232B782B-5CD9-73B3-B729-03427485F29A" name="FK_PROP_PRODUTOR">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 07:52:16 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="BB0D5226-9A03-7E69-3C45-1331C5F3DB36"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
