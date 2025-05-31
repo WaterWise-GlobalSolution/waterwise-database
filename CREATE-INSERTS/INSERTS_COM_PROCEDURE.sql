@@ -80,28 +80,32 @@ END;
 /
 
 
--- Insert 1: João Silva
+-- Insert 1: Leonardo Oliveira
 BEGIN
     CRUD_PRODUTOR_RURAL(
         v_operacao => 'INSERT',
         v_id_produtor => NULL,
-        v_nome_completo => 'João Silva Santos',
+        v_nome_completo => 'Leonardo Oliveira',
         v_cpf_cnpj => '12345678901',
-        v_email => 'joao.silva@email.com',
-        v_telefone => '(11) 98765-4321'
+        v_email => 'leooli@email.com',
+        v_telefone => '(11) 98765-4321',
+        v_senha => 'leooli123',
+        v_data_cadastro => SYSDATE
     );
 END;
 /
 
--- Insert 2: Maria Oliveira (CNPJ)
+-- Insert 2: Sara Sousa
 BEGIN
     CRUD_PRODUTOR_RURAL(
         v_operacao => 'INSERT',
         v_id_produtor => NULL,
-        v_nome_completo => 'Maria Oliveira Agropecuária LTDA',
+        v_nome_completo => 'Sara Sousa Agropecuária LTDA',
         v_cpf_cnpj => '12345678000195',
-        v_email => 'maria.oliveira@agropecuaria.com.br',
-        v_telefone => '(19) 3456-7890'
+        v_email => 'sara.sousa@agropecuaria.com.br',
+        v_telefone => '(19) 3456-7890',
+        v_senha => 'sara2024',
+        v_data_cadastro => TO_DATE('2024-01-15', 'YYYY-MM-DD')
     );
 END;
 /
