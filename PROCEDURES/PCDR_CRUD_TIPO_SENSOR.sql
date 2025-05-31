@@ -11,13 +11,6 @@ CREATE OR REPLACE PROCEDURE CRUD_TIPO_SENSOR(
     v_valor_max        IN GS_WW_TIPO_SENSOR.valor_max%TYPE
 ) IS
     v_mensagem VARCHAR2(255);
-    -- Variáveis para o SELECT
-    v_result_nome       GS_WW_TIPO_SENSOR.nome_tipo%TYPE;
-    v_result_descricao  GS_WW_TIPO_SENSOR.descricao%TYPE;
-    v_result_unidade    GS_WW_TIPO_SENSOR.unidade_medida%TYPE;
-    v_result_min        GS_WW_TIPO_SENSOR.valor_min%TYPE;
-    v_result_max        GS_WW_TIPO_SENSOR.valor_max%TYPE;
-
 BEGIN
     IF v_operacao = 'INSERT' THEN
         INSERT INTO GS_WW_TIPO_SENSOR (
@@ -42,32 +35,12 @@ BEGIN
         WHERE id_tipo_sensor = v_id_tipo_sensor;
         v_mensagem := 'Tipo de sensor deletado com sucesso.';
 
-    ELSIF v_operacao = 'SELECT' THEN
-        BEGIN
-            SELECT nome_tipo, descricao, unidade_medida, valor_min, valor_max
-            INTO v_result_nome, v_result_descricao, v_result_unidade, v_result_min, v_result_max
-            FROM GS_WW_TIPO_SENSOR
-            WHERE id_tipo_sensor = v_id_tipo_sensor;
-
-            DBMS_OUTPUT.PUT_LINE('Nome: ' || v_result_nome);
-            DBMS_OUTPUT.PUT_LINE('Descrição: ' || v_result_descricao);
-            DBMS_OUTPUT.PUT_LINE('Unidade: ' || v_result_unidade);
-            DBMS_OUTPUT.PUT_LINE('Valor Mín: ' || v_result_min);
-            DBMS_OUTPUT.PUT_LINE('Valor Máx: ' || v_result_max);
-
-        EXCEPTION
-            WHEN NO_DATA_FOUND THEN
-                DBMS_OUTPUT.PUT_LINE('Tipo de sensor não encontrado com o ID especificado.');
-        END;
-
     ELSE
-        RAISE_APPLICATION_ERROR(-20002, 'Operação inválida. Utilize INSERT, UPDATE, DELETE ou SELECT.');
+        RAISE_APPLICATION_ERROR(-20002, 'Operação inválida. Utilize INSERT, UPDATE ou DELETE.');
     END IF;
 
-    IF v_operacao != 'SELECT' THEN
-        DBMS_OUTPUT.PUT_LINE(v_mensagem);
-        COMMIT;
-    END IF;
+    DBMS_OUTPUT.PUT_LINE(v_mensagem);
+    COMMIT;
 
 EXCEPTION
     WHEN OTHERS THEN
