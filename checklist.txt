@@ -1,36 +1,42 @@
-1 Modelagem Relacional (3FN) – 20 pontos
+OK 1 Modelagem Relacional (3FN) – 20 pontos
 
 • Entidades bem definidas (ex: Usuário, Ocorrência, Área de Risco, Alerta, Campanha)---- FEITO 
 • Normalização adequada---- FEITO 
 
 ------------------------------------------------------------------------------------------------------------
-2 Criação e Inserção de Dados – 15 pontos
+OK 2 Criação e Inserção de Dados – 15 pontos
 
 • Tabelas com PKs, FKs, constraints---- FEITO 
 • Ao menos 5 registros por tabela---- FEITO 
 
 ------------------------------------------------------------------------------------------------------------
-3 Desenvolvimento de Package em PL/SQL – 30 pontos
+OK 3 Desenvolvimento de Package em PL/SQL – 30 pontos
 
 Toda a lógica programada deve estar dentro de uma única PACKAGE no Oracle
 Incluindo obrigatoriamente:
 • Procedures(inserção, alteração, exclusão) ---- FEITO 
-• Funções(ex: retorno de pontuação, ranking, risco)
-• Triggers (validação automática)
-• Cursores (com LOOPs)
-• Blocos anônimos com IF/ELSE e controle de fluxo
-• Relatórios complexos com JOINs e agregações
+• Funções(ex: retorno de pontuação, ranking, risco) ---- FEITO 
+• Triggers (validação automática) ---- FEITO
+• Cursores (com LOOPs)---- FEITO 
+• Blocos anônimos com IF/ELSE e controle de fluxo---- FEITO 
+• Relatórios complexos com JOINs e agregações---- FEITO 
 
 ------------------------------------------------------------------------------------------------------------
-4 Consultas SQL Avançadas – 15 pontos
+OK 4 Consultas SQL Avançadas – 15 pontos
 
 • Múltiplos joins
 • Agrupamentos e filtros com funções (COUNT, AVG, MAX, etc.)
 • Exibição de relatórios simulando uso real do sistema
+
+------------------------------------------------------------------------------------------------------------
 5 Integração com MongoDB – 10 pontos
+
 • Armazenamento de dados não estruturados: logs, relatos livres, metadados de imagens
 • Demonstração da integração no vídeo
+
+------------------------------------------------------------------------------------------------------------
 6 Entrega PDF + Vídeo Explicativo– 10 pontos
+
 • PDF contendo:
 • Modelo relacional
 • Package completa (código e prints de execução)
