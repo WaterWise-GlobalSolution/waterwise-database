@@ -1,0 +1,60 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<TableProxyOraclev20c class="oracle.dbtools.crest.model.design.storage.oracle.v20c.TableProxyOraclev20c" name="GS_WW_LEITURA_SENSOR" directorySegmentName="seg_0" id="C88240ED-BDCC-8125-FBCD-B1C1583E1AC3">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<logging>YES</logging>
+<partitionedRowMovement>DISABLE</partitionedRowMovement>
+<temporaryChanged>false</temporaryChanged>
+<accessDriverType>oracle_loader</accessDriverType>
+<rejectLimit></rejectLimit>
+<columnProxies itemClass="oracle.dbtools.crest.model.design.storage.oracle.v12c.ColumnProxyOraclev12c">
+<ColumnProxy name="ID_LEITURA" id="4064A94D-9CFF-88A5-98D9-3BBB505EFDD2">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<autoIncrementDDL>IDENTITY_CLAUSE</autoIncrementDDL>
+</ColumnProxy>
+<ColumnProxy name="TIMESTAMP_LEITURA" id="46F00AD4-256B-4F08-2650-B2CD040D607F">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<defaultValue>CURRENT_TIMESTAMP</defaultValue>
+</ColumnProxy>
+<ColumnProxy name="TEMPERATURA_AR" id="79DD523D-E6A2-4089-D33E-21ED16CA4EB4">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="ID_SENSOR" id="E79CF27E-FA36-11D1-655D-7BF5B72F1FCE">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="PRECIPITACAO_MM" id="F25B55AB-2FF2-F705-F011-0D3D4D0E073C">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+</ColumnProxy>
+<ColumnProxy name="UMIDADE_SOLO" id="F5A32DB4-8ED4-E433-CDF2-ABF8569B9441">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+</ColumnProxy>
+</columnProxies>
+<foreignKeys>
+<ForeignKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.FKProxyOraclev10g" name="FK_LEITURA_SENSOR" id="01C5AB14-DD15-3012-E2B6-E97C4E136F81">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+</ForeignKey>
+</foreignKeys>
+<primaryKeys>
+<PrimaryKey class="oracle.dbtools.crest.model.design.storage.oracle.v10g.PKProxyOraclev10g" name="GS_WW_LEITURA_SENSOR_PK" id="D0516006-8C12-29B9-F8B0-6E6B483AE638">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<indexSort>SORTED</indexSort>
+</PrimaryKey>
+</primaryKeys>
+</TableProxyOraclev20c>

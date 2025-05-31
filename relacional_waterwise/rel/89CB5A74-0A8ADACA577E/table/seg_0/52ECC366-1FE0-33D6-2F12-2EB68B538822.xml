@@ -1,0 +1,120 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="52ECC366-1FE0-33D6-2F12-2EB68B538822" name="GS_WW_SENSOR_IOT">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>EA88C934-7F46-1BD5-B22D-554CC38AEB93</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_SENSOR" id="630BAB08-FB2E-7E0A-4BA6-A7CBAF6F99FB">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>011A8DDA-97B5-E79A-1DFA-36D727CF213F</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>D7633BD5-2237-7E97-E2AD-9C772C0DFEC2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="ID_PROPRIEDADE" id="8F651648-5A49-E043-D0C9-603B8B8B1CDD">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>B9678D2E-70FC-1185-CE8E-376BF3C6CFD9</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>D7633BD5-2237-7E97-E2AD-9C772C0DFEC2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5631712F-3FA7-D783-EE52-AE287480F6CB" referredColumn="A628A157-683D-7836-43D7-D6394047D4B8"/>
+</associations>
+</Column>
+<Column name="ID_TIPO_SENSOR" id="B07576C7-9AD6-9690-F3B4-D920DE3219DA">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>C2EA467C-924B-26C2-BB7B-60CD1724E8CD</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>D7633BD5-2237-7E97-E2AD-9C772C0DFEC2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="B2E449A7-8DC9-18C2-8214-4C3FF93CDD09" referredColumn="159D5C83-B08A-0793-64E1-178FDD6E357F"/>
+</associations>
+</Column>
+<Column name="MODELO_DISPOSITIVO" id="4B7A3081-9979-8AFD-3463-2D68B55ED3C2">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>789188F5-D10D-8224-283F-76CCBCFFB839</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>C9392814-8BD2-C1FE-9FBF-FAA1D53E30B3</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DATA_INSTALACAO" id="ED53D455-A66B-6F0E-6154-A656B41E9ED4">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>164749E1-8D10-E89E-EEDE-57C6EFE9CFA1</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<domain>1C834BF2-0C2B-D8B8-1991-2563EB7912A1</domain>
+<defaultValue>SYSDATE</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="A49DF896-D7FA-026D-C1AA-C73EB71C9216" name="GS_WW_SENSOR_IOT_PK">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>B54B3870-6C06-E63F-04F9-8FD7B40DC522</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="630BAB08-FB2E-7E0A-4BA6-A7CBAF6F99FB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9918BBB8-62FC-8453-E124-329747C0B53F" name="FK_SENSOR_PROPRIEDADE">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8F651648-5A49-E043-D0C9-603B8B8B1CDD"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AFBC72DC-3A5A-8AE9-B103-9EFFB0FC61C2" name="FK_SENSOR_TIPO">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B07576C7-9AD6-9690-F3B4-D920DE3219DA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

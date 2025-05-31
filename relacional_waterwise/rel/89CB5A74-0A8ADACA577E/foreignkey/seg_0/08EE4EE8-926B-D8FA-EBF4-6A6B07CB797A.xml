@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="08EE4EE8-926B-D8FA-EBF4-6A6B07CB797A" containerWithKeyObject="EB556383-1A45-28D3-0D4C-C9C3CF51B9E1" localFKIndex="DDC2F9CC-1340-F2D9-356C-2E106D450DEE" name="FK_PROP_PRODUTOR">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>CEA64A2C-8202-1A5D-B7E3-88B4934387DC</importedID>
+<referredTableLongName>GS_WW_PRODUTOR_RURAL</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>B4F935F9-F28E-0717-B97E-846F5D2D774F</referredTableID>
+<keyObject>61D895C1-BC0F-A2A6-6C17-23E9DF5FDC0D</keyObject>
+<referredKeyID>61D895C1-BC0F-A2A6-6C17-23E9DF5FDC0D</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_PRODUTOR</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

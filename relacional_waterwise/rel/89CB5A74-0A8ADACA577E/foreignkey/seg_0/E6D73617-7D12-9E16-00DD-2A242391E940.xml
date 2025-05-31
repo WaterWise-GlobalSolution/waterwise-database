@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="E6D73617-7D12-9E16-00DD-2A242391E940" containerWithKeyObject="EFAED831-2AEC-CED0-180B-BA7A4B5BCC7F" localFKIndex="F817262E-0F70-4DB5-F30C-0396F79B9C46" name="FK_ALERTA_SEVERIDADE">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>4AE52F6E-A6D0-24B7-B844-1FCE4CD554CE</importedID>
+<referredTableLongName>GS_WW_NIVEL_SEVERIDADE</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>54D41231-CB28-D55B-9DDC-312613D94CCE</referredTableID>
+<keyObject>1AEB3707-A012-C1AE-38E3-1C0FAA214224</keyObject>
+<referredKeyID>1AEB3707-A012-C1AE-38E3-1C0FAA214224</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_NIVEL_SEVERIDADE</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

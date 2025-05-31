@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="D8CD8E98-B821-E18F-B327-561DB391800A" containerWithKeyObject="EB556383-1A45-28D3-0D4C-C9C3CF51B9E1" localFKIndex="A00E4F70-642E-677B-E375-40637A3CBF71" name="FK_PROP_DEGRADACAO">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>E370C415-F295-B588-5E6C-E139E3088944</importedID>
+<referredTableLongName>GS_WW_NIVEL_DEGRADACAO_SOLO</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>980B1049-CB05-D9F0-8B84-77DA6CD951E6</referredTableID>
+<keyObject>092591DF-C296-5135-0493-B59E6DD26516</keyObject>
+<referredKeyID>092591DF-C296-5135-0493-B59E6DD26516</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_NIVEL_DEGRADACAO</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

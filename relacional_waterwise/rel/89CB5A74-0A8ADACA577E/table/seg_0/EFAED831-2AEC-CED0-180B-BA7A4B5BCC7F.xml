@@ -1,0 +1,145 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="EFAED831-2AEC-CED0-180B-BA7A4B5BCC7F" name="GS_WW_ALERTA">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>0580295E-650B-64C0-B66E-82372C5170B7</importedID>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="ID_ALERTA" id="88CEC9FD-4B41-4B48-DD8E-9A9C91D6BC61">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>8971F87C-FDA0-5B87-885E-EBA4664F3AFC</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>D7633BD5-2237-7E97-E2AD-9C772C0DFEC2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementColumn>true</autoIncrementColumn>
+<identityColumn>true</identityColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<autoIncrementOrder>false</autoIncrementOrder>
+</Column>
+<Column name="ID_PRODUTOR" id="85F31516-A6F8-CCC1-151D-0447D8331D3E">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>CB62A571-23BD-79F0-CE40-30A9565C2447</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>D7633BD5-2237-7E97-E2AD-9C772C0DFEC2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6A12F4FE-E5AE-5225-4843-646CEFE67D48" referredColumn="956690D5-88ED-090E-54EA-0E6E52AE052F"/>
+</associations>
+</Column>
+<Column name="ID_LEITURA" id="ECAF5A73-49F4-98FA-8633-7240E1A7C238">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>1171B6FF-B1E4-E7E3-6D53-64C45024FCCB</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>D7633BD5-2237-7E97-E2AD-9C772C0DFEC2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E2E2B4B0-DE88-DC55-584E-7249449EA1B0" referredColumn="4064A94D-9CFF-88A5-98D9-3BBB505EFDD2"/>
+</associations>
+</Column>
+<Column name="ID_NIVEL_SEVERIDADE" id="C1853EC3-13C0-9F4D-C2D2-78A879BB49C7">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>13AAFED3-2CF3-2226-4F42-356D3A45B9F9</importedID>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>D7633BD5-2237-7E97-E2AD-9C772C0DFEC2</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="E6D73617-7D12-9E16-00DD-2A242391E940" referredColumn="C140C629-7445-70F6-DC0A-BE6982184F12"/>
+</associations>
+</Column>
+<Column name="TIMESTAMP_ALERTA" id="29A497B0-D713-A0F4-2CB4-FE9F6DA7DD30">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>9E1673AA-F300-2C83-AAAF-1A09A2FEAEC3</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT015</logicalDatatype>
+<domain>4E2F28B4-0B90-A5C7-2FB1-DE5699611306</domain>
+<defaultValue>CURRENT_TIMESTAMP</defaultValue>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="DESCRICAO_ALERTA" id="8A892415-9201-FE8B-991B-7736DB760513">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>454EE552-083C-6394-7C83-3BC0953D4550</importedID>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>617AEFB3-2163-0867-FD6B-F0DE8C5516F5</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="B0FAF068-1FD7-4AAC-3842-BD04D3FC0C46" name="GS_WW_ALERTA_PK">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>FFC8BA7E-FB45-01C2-6ACB-A307210AEDE3</importedID>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="88CEC9FD-4B41-4B48-DD8E-9A9C91D6BC61"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E9A2B3AB-B0F1-1DFE-8C87-F464C326EC0E" name="FK_ALERTA_LEITURA">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="ECAF5A73-49F4-98FA-8633-7240E1A7C238"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5172D953-3FD2-FBDC-6F52-A302640C6832" name="FK_ALERTA_PRODUTOR">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="85F31516-A6F8-CCC1-151D-0447D8331D3E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F817262E-0F70-4DB5-F30C-0396F79B9C46" name="FK_ALERTA_SEVERIDADE">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C1853EC3-13C0-9F4D-C2D2-78A879BB49C7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="6A12F4FE-E5AE-5225-4843-646CEFE67D48" containerWithKeyObject="EFAED831-2AEC-CED0-180B-BA7A4B5BCC7F" localFKIndex="5172D953-3FD2-FBDC-6F52-A302640C6832" name="FK_ALERTA_PRODUTOR">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>18059766-2069-0863-F3AD-9847ADE66EAB</importedID>
+<referredTableLongName>GS_WW_PRODUTOR_RURAL</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>B4F935F9-F28E-0717-B97E-846F5D2D774F</referredTableID>
+<keyObject>61D895C1-BC0F-A2A6-6C17-23E9DF5FDC0D</keyObject>
+<referredKeyID>61D895C1-BC0F-A2A6-6C17-23E9DF5FDC0D</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_PRODUTOR</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

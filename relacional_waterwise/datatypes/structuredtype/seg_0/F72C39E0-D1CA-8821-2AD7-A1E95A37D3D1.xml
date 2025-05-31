@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
 <StructuredType class="oracle.dbtools.crest.model.design.datatypes.StructuredType" name="XMLTYPE" directorySegmentName="seg_0" id="F72C39E0-D1CA-8821-2AD7-A1E95A37D3D1">
 <createdBy>felip</createdBy>
-<createdTime>2025-05-31 07:51:47 UTC</createdTime>
+<createdTime>2025-05-31 19:11:19 UTC</createdTime>
 <ownerDesignName>relacional_waterwise</ownerDesignName>
 <visible>false</visible>
 <predefined>true</predefined>

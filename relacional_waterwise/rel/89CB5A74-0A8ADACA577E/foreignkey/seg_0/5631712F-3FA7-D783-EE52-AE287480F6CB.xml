@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="5631712F-3FA7-D783-EE52-AE287480F6CB" containerWithKeyObject="52ECC366-1FE0-33D6-2F12-2EB68B538822" localFKIndex="9918BBB8-62FC-8453-E124-329747C0B53F" name="FK_SENSOR_PROPRIEDADE">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>1B439782-FAEC-A83B-8290-49607BBD810F</importedID>
+<referredTableLongName>GS_WW_PROPRIEDADE_RURAL</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>EB556383-1A45-28D3-0D4C-C9C3CF51B9E1</referredTableID>
+<keyObject>18C71B41-C10D-13D2-FD0A-7B63A2CD6114</keyObject>
+<referredKeyID>18C71B41-C10D-13D2-FD0A-7B63A2CD6114</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_PROPRIEDADE</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

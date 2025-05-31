@@ -1,0 +1,15 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<relationalModel class="oracle.dbtools.crest.model.design.relational.RelationalDesign" name="Relational_1" id="89CB5A74-3C53-7691-BF7B-0A8ADACA577E" mainViewID="56373EA4-B14E-1DFF-A892-2CB236EF5E12">
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:20 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<shouldBeOpen>false</shouldBeOpen>
+<selectedRDBMSSite>01F6E6D1-21D0-CFBD-ABDD-3988D1813575</selectedRDBMSSite>
+<importDDLFileStamps>
+<importDDLFileStamp class="oracle.dbtools.crest.imports.DDLFileStamp">
+<fileName>CREATE_TABLE_FINAL.sql</fileName>
+<pathName>D:\FIAP\waterwise-database\CREATE-INSERTS</pathName>
+<dbType>17</dbType>
+</importDDLFileStamp>
+</importDDLFileStamps>
+</relationalModel>

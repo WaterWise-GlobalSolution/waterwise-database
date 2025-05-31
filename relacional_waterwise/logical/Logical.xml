@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="FD361285-B62A-1E1B-C3E4-8614D14A5F77" mainViewID="BFFA439C-808F-4E33-3E7D-17617A36C74F">
+<LogicalDesign class="oracle.dbtools.crest.model.design.logical.LogicalDesign" name="Logical" id="828F8A5C-0526-0E4E-4A42-225FD11016D2" mainViewID="BABAEFD8-FE97-926C-00F0-6B6C42E5DAA6">
 <createdBy>felip</createdBy>
-<createdTime>2025-05-31 07:51:47 UTC</createdTime>
+<createdTime>2025-05-31 19:11:18 UTC</createdTime>
 <ownerDesignName>relacional_waterwise</ownerDesignName>
 <shouldBeOpen>false</shouldBeOpen>
 </LogicalDesign>

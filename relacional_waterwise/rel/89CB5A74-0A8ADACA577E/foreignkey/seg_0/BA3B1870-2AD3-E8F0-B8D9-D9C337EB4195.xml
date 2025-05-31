@@ -1,0 +1,18 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="BA3B1870-2AD3-E8F0-B8D9-D9C337EB4195" containerWithKeyObject="C88240ED-BDCC-8125-FBCD-B1C1583E1AC3" localFKIndex="01C5AB14-DD15-3012-E2B6-E97C4E136F81" name="FK_LEITURA_SENSOR">
+<sourceDDLFile>CREATE_TABLE_FINAL.sql</sourceDDLFile>
+<createdBy>felip</createdBy>
+<createdTime>2025-05-31 19:11:54 UTC</createdTime>
+<ownerDesignName>relacional_waterwise</ownerDesignName>
+<importedID>3E4AA652-BA5C-43F8-5688-0B83DED2BE98</importedID>
+<referredTableLongName>GS_WW_SENSOR_IOT</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>52ECC366-1FE0-33D6-2F12-2EB68B538822</referredTableID>
+<keyObject>A49DF896-D7FA-026D-C1AA-C73EB71C9216</keyObject>
+<referredKeyID>A49DF896-D7FA-026D-C1AA-C73EB71C9216</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>ID_SENSOR</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>
