@@ -1,17 +1,12 @@
 OK 1 Modelagem Relacional (3FN) – 20 pontos
-
 • Entidades bem definidas (ex: Usuário, Ocorrência, Área de Risco, Alerta, Campanha)---- FEITO 
 • Normalização adequada---- FEITO 
-
 ------------------------------------------------------------------------------------------------------------
 OK 2 Criação e Inserção de Dados – 15 pontos
-
 • Tabelas com PKs, FKs, constraints---- FEITO 
 • Ao menos 5 registros por tabela---- FEITO 
-
 ------------------------------------------------------------------------------------------------------------
 OK 3 Desenvolvimento de Package em PL/SQL – 30 pontos
-
 Toda a lógica programada deve estar dentro de uma única PACKAGE no Oracle
 Incluindo obrigatoriamente:
 • Procedures(inserção, alteração, exclusão) ---- FEITO 
@@ -20,19 +15,19 @@ Incluindo obrigatoriamente:
 • Cursores (com LOOPs)---- FEITO 
 • Blocos anônimos com IF/ELSE e controle de fluxo---- FEITO 
 • Relatórios complexos com JOINs e agregações---- FEITO 
-
 ------------------------------------------------------------------------------------------------------------
 OK 4 Consultas SQL Avançadas – 15 pontos
-
 • Múltiplos joins
 • Agrupamentos e filtros com funções (COUNT, AVG, MAX, etc.)
 • Exibição de relatórios simulando uso real do sistema
-
 ------------------------------------------------------------------------------------------------------------
+
+
 5 Integração com MongoDB – 10 pontos
 
 • Armazenamento de dados não estruturados: logs, relatos livres, metadados de imagens
 • Demonstração da integração no vídeo
+
 
 ------------------------------------------------------------------------------------------------------------
 6 Entrega PDF + Vídeo Explicativo– 10 pontos
