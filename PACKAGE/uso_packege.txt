@@ -1,217 +1,54 @@
-SET SERVEROUTPUT ON;
+SET SERVEROUTPUT ON SIZE UNLIMITED;
 
--- ============================================================================
--- PACKAGE PKG_WATERWISE - Sistema Completo de Monitoramento Agrícola
--- ============================================================================
-
--- COMPONENTES:
--- ✅ 8 Procedures CRUD
--- ✅ 3 Funções de cálculo especializadas
--- ✅ 7 Procedures de análise com cursores
--- ✅ 7 Procedures de relatórios executivos
--- ✅ 4 Procedures utilitárias
--- TOTAL: 29 procedimentos integrados
-
--- USO: Execute PKG_WATERWISE.INICIALIZAR_SISTEMA para começar
-
--- FUNCIONALIDADES INTEGRADAS:
--- - CRUD completo para todas as tabelas
--- - Análise de risco de alagamento
--- - Cálculo de degradação do solo
--- - Capacidade de absorção
--- - Monitoramento em tempo real
--- - Relatórios executivos
--- - Dashboard de métricas
--- - Ranking de produtores
--- - Análise regional
--- - Tendências climáticas
--- - Backup automatizado
--- - Validação de integridade
-
--- ============================================================================
--- EXEMPLOS DE USO DA PACKAGE PKG_WATERWISE
--- ============================================================================
-
--- 1. Inicializar o sistema (configurações iniciais e dados de exemplo)
 BEGIN
-    PKG_WATERWISE.INICIALIZAR_SISTEMA;
-    DBMS_OUTPUT.PUT_LINE('Sistema WaterWise inicializado.');
+  PKG_WATERWISE_SLIM.DASHBOARD_METRICAS;
 END;
 /
 
--- 2. Testar procedimentos CRUD (Exemplo: Inserir, Atualizar, Deletar Produtor Rural)
--- Inserir um novo produtor
+
 BEGIN
-    PKG_WATERWISE.CRUD_PRODUTOR_RURAL(
-        v_operacao          => 'INSERT',
-        v_id_produtor       => NULL, -- NULL para INSERT, pois é IDENTITY
-        v_nome_completo     => 'Felipe Amador',
-        v_cpf_cnpj          => '98765432109', -- Alterado para um CPF/CNPJ diferente e único
-        v_email             => 'felipe.amador@email.com', -- Alterado para um email diferente e único
-        v_telefone          => '(21) 91234-5678',
-        v_senha             => 'Felipe2025', -- Senha para Felipe
-        v_data_cadastro     => SYSDATE
-    );
-    DBMS_OUTPUT.PUT_LINE('Produtor Felipe Amador inserido.');
-EXCEPTION
-    WHEN OTHERS THEN
-        DBMS_OUTPUT.PUT_LINE('Erro ao inserir produtor: ' || SQLERRM);
-        ROLLBACK;
+  PKG_WATERWISE_SLIM.VERIFICAR_RISCO_ENCHENTE(p_id_propriedade => 101);
 END;
 /
 
--- Atualizar um produtor existente (assumindo que o ID 1 existe após a inicialização ou inserção)
+
 BEGIN
-    PKG_WATERWISE.CRUD_PRODUTOR_RURAL(
-        v_operacao          => 'UPDATE',
-        v_id_produtor       => 1,
-        v_nome_completo     => 'João Silva Novo',
-        v_cpf_cnpj          => '12345678901',
-        v_email             => 'joao.novo@email.com',
-        v_telefone          => '(11) 99999-8888',
-        v_senha             => 'NovaSenhaForte456', -- Necessário para UPDATE também se a validação estiver lá
-        v_data_cadastro     => NULL -- Não precisa atualizar a data de cadastro, ou passe o valor existente
-    );
-    DBMS_OUTPUT.PUT_LINE('Produtor com ID 1 atualizado.');
-EXCEPTION
-    WHEN OTHERS THEN
-        DBMS_OUTPUT.PUT_LINE('Erro ao atualizar produtor: ' || SQLERRM);
-        ROLLBACK;
+  PKG_WATERWISE_SLIM.VERIFICAR_RISCO_ENCHENTE;
 END;
 /
 
--- Selecionar produtores (não há um CRUD SELECT direto, mas podemos consultar a tabela)
-SELECT * FROM GS_WW_PRODUTOR_RURAL;
 
--- Exemplo de inserção para outras tabelas (para ter dados para análises)
 BEGIN
-    -- Inserir Propriedade Rural
-    PKG_WATERWISE.CRUD_PROPRIEDADE_RURAL(
-        'INSERT', NULL, 1, 'Fazenda Esperança', 'Rua Principal, 100', 'LatitudeX', 'LongitudeY', 150.75, 3
-    );
-    DBMS_OUTPUT.PUT_LINE('Propriedade Fazenda Esperança inserida.');
-
-    -- Inserir Sensor IoT
-    PKG_WATERWISE.CRUD_SENSOR_IOT(
-        'INSERT', NULL, 1, 1, 'Sensor de Umidade A', 'Ativo', SYSDATE - 10
-    );
-    DBMS_OUTPUT.PUT_LINE('Sensor de Umidade A inserido.');
-
-    -- Inserir Leitura Sensor (exemplo para testes de análise)
-    -- ID_SENSOR 1, UMIDADE_SOLO 75.5, TEMPERATURA_AR 25.0, PRECIPITACAO_MM 5.0
-    PKG_WATERWISE.CRUD_LEITURA_SENSOR(
-        'INSERT', NULL, 1, SYSTIMESTAMP, 75.5, 25.0, 5.0
-    );
-    PKG_WATERWISE.CRUD_LEITURA_SENSOR(
-        'INSERT', NULL, 1, SYSTIMESTAMP - INTERVAL '1' DAY, 60.0, 24.0, 10.0
-    );
-    PKG_WATERWISE.CRUD_LEITURA_SENSOR(
-        'INSERT', NULL, 1, SYSTIMESTAMP - INTERVAL '2' DAY, 40.0, 22.0, 0.0
-    );
-    DBMS_OUTPUT.PUT_LINE('Leituras de sensor inseridas.');
-EXCEPTION
-    WHEN OTHERS THEN
-        DBMS_OUTPUT.PUT_LINE('Erro ao inserir dados para testes: ' || SQLERRM);
-        ROLLBACK;
+  PKG_WATERWISE_SLIM.MELHORES_PRODUTORES;
 END;
 /
 
--- 3. Utilizar funções de cálculo especializadas
--- Calcular Risco de Alagamento para uma propriedade (substitua X pelo ID da propriedade)
-SELECT
-    id_propriedade,
-    nome_propriedade,
-    PKG_WATERWISE.CALCULAR_RISCO_ALAGAMENTO(id_propriedade) AS risco_alagamento
-FROM GS_WW_PROPRIEDADE_RURAL
-WHERE id_propriedade = 1;
 
--- Calcular Taxa de Degradação do Solo para uma propriedade
-SELECT
-    id_propriedade,
-    nome_propriedade,
-    PKG_WATERWISE.CALCULAR_TAXA_DEGRADACAO_SOLO(id_propriedade) AS taxa_degradacao
-FROM GS_WW_PROPRIEDADE_RURAL
-WHERE id_propriedade = 1;
-
--- Calcular Capacidade de Absorção para uma propriedade
-SELECT
-    id_propriedade,
-    nome_propriedade,
-    PKG_WATERWISE.CALCULAR_CAPACIDADE_ABSORCAO(id_propriedade) AS capacidade_absorcao
-FROM GS_WW_PROPRIEDADE_RURAL
-WHERE id_propriedade = 1;
-
--- 4. Testar procedimentos de análise e relatórios executivos
-
--- Análise de Risco por Região
 BEGIN
-    DBMS_OUTPUT.PUT_LINE(CHR(10) || '--- ANÁLISE DE RISCO POR REGIÃO ---');
-    PKG_WATERWISE.ANALISE_RISCO_POR_REGIAO;
+  PKG_WATERWISE_SLIM.RISCO_POR_REGIAO;
 END;
 /
 
--- Dashboard de Métricas
+
 BEGIN
-    DBMS_OUTPUT.PUT_LINE(CHR(10) || '--- DASHBOARD DE MÉTRICAS ---');
-    PKG_WATERWISE.DASHBOARD_METRICAS;
+  PKG_WATERWISE_SLIM.RELATORIO_PROPRIEDADE(p_id_propriedade => 101);
 END;
 /
 
--- Ranking de Produtores por Produtividade
+
 BEGIN
-    DBMS_OUTPUT.PUT_LINE(CHR(10) || '--- RANKING DE PRODUTORES POR PRODUTIVIDADE ---');
-    PKG_WATERWISE.RANKING_PRODUTORES;
+  PKG_WATERWISE_SLIM.ANALISAR_ALERTAS_DIARIOS;
 END;
 /
 
--- Relatório de Uso de Água por Cultura
+
 BEGIN
-    DBMS_OUTPUT.PUT_LINE(CHR(10) || '--- RELATÓRIO DE USO DE ÁGUA POR CULTURA ---');
-    PKG_WATERWISE.RELATORIO_USO_AGUA_CULTURA;
+  PKG_WATERWISE_SLIM.ESTADO_GERAL_SOLO;
 END;
 /
 
--- Tendências Climáticas (últimos 15 dias)
-BEGIN
-    DBMS_OUTPUT.PUT_LINE(CHR(10) || '--- TENDÊNCIAS CLIMÁTICAS (ÚLTIMOS 15 DIAS) ---');
-    PKG_WATERWISE.TENDENCIAS_CLIMATICAS(15);
-END;
-/
 
--- Status dos Sensores
 BEGIN
-    DBMS_OUTPUT.PUT_LINE(CHR(10) || '--- STATUS DOS SENSORES ---');
-    PKG_WATERWISE.STATUS_SENSORES;
-END;
-/
-
--- Monitoramento em Tempo Real (simulação)
-BEGIN
-    DBMS_OUTPUT.PUT_LINE(CHR(10) || '--- MONITORAMENTO EM TEMPO REAL ---');
-    PKG_WATERWISE.MONITORAMENTO_TEMPO_REAL;
-END;
-/
-
--- Produtividade por Região
-BEGIN
-    DBMS_OUTPUT.PUT_LINE(CHR(10) || '--- PRODUTIVIDADE POR REGIÃO ---');
-    PKG_WATERWISE.PRODUTIVIDADE_POR_REGIAO;
-END;
-/
-
--- 5. Testar procedimentos utilitários
-
--- Validar integridade dos dados
-BEGIN
-    DBMS_OUTPUT.PUT_LINE(CHR(10) || '--- VALIDAÇÃO DE INTEGRIDADE DOS DADOS ---');
-    PKG_WATERWISE.VALIDAR_INTEGRIDADE_DADOS;
-END;
-/
-
--- Simulação de backup automatizado (apenas demonstra a chamada)
-BEGIN
-    DBMS_OUTPUT.PUT_LINE(CHR(10) || '--- INICIANDO BACKUP AUTOMATIZADO (SIMULADO) ---');
-    PKG_WATERWISE.BACKUP_AUTOMATIZADO;
-    DBMS_OUTPUT.PUT_LINE('Backup automatizado (simulado) concluído.');
+  PKG_WATERWISE_SLIM.VALIDAR_INTEGRIDADE_DADOS;
 END;
 /
