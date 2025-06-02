@@ -22,15 +22,15 @@ Objetivos<br>
 •	Promover práticas sustentáveis<br>
 
 <br>
-🎛️ Funcionalidades Principais
+🎛️ Funcionalidades Principais:
 <br>
 📊 Monitoramento Real-timeSensores IoT coletam dados 24/7✅<br>
 🧠 Cálculos InteligentesAlgoritmos de risco e capacidade✅<br>
 🚨 Alertas AutomáticosTriggers baseados em condições críticas✅<br>
 📈 Dashboards ExecutivosMétricas e KPIs em tempo real✅<br>
-📊 Métricas Calculadas
+📊 Métricas Calculadas<br><br>
 
-🗄️ Estrutura do Banco<br>
+🗄️ Estrutura do Banco:<br>
 Oracle Database (Dados Estruturados)<br>
 
 8 Tabelas Principais (Normalizadas 3FN)<br>
@@ -52,7 +52,7 @@ images - Imagens e metadados<br>
 
 <div align="center">
 💧 <strong>WaterWise: Cada Gota Importa, Cada Metro Conta</strong><br>
-Equipe WaterWise (2TDSPS)
+Equipe WaterWise (2TDSPS)<br>
 Felipe Amador RM: 553528<br>
 Leonardo de Oliveira RM: 554024<br>
 Sara Sousa RM: 552656<br>
