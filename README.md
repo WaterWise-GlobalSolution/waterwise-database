@@ -11,7 +11,7 @@ Problema Identificado<br>
 •	Falta de monitoramento em tempo real das condições do solo<br>
 •	Ausência de sistemas integrados entre zona rural e urbana<br>
 <br>
-Solução Proposta
+Solução Proposta<br>
 "A enchente que alaga uma avenida pode começar com uma gota que o solo seco da zona rural não absorveu. Com WaterWise, cada metro de terra volta a ser uma esponja contra desastres."
 <br>
 Objetivos<br>
