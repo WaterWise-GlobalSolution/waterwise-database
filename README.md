@@ -1,60 +1,44 @@
 🌊 WaterWise - Sistema Inteligente de Prevenção a Enchentes
-
 "Transformando propriedades rurais em guardiões inteligentes contra enchentes urbanas"
 
-Conceito:<br>
+Conceito:
 O WaterWise é um ecossistema tecnológico inovador que previne enchentes urbanas através do monitoramento inteligente de propriedades rurais, transformando cada fazenda em uma "esponja natural" contra desastres hídricos.
-<br><br>
-Problema Identificado:<br>
-•	Enchentes urbanas causam bilhões em prejuízos anualmente<br>
-•	Degradação do solo rural reduz capacidade de absorção de água<br>
-•	Falta de monitoramento em tempo real das condições do solo<br>
-•	Ausência de sistemas integrados entre zona rural e urbana<br>
-<br>
-Solução Proposta:<br>
+
+Problema Identificado:
+
+Enchentes urbanas causam bilhões em prejuízos anualmente.
+A degradação do solo rural reduz a capacidade de absorção de água.
+Falta de monitoramento em tempo real das condições do solo.
+Ausência de sistemas integrados entre a zona rural e urbana.
+Solução Proposta:
 "A enchente que alaga uma avenida pode começar com uma gota que o solo seco da zona rural não absorveu. Com WaterWise, cada metro de terra volta a ser uma esponja contra desastres."
-<br>
-Objetivos<br>
-•	Monitorar propriedades rurais em tempo real<br>
-•	Calcular capacidade de absorção do solo<br>
-•	Prever riscos de enchentes<br>
-•	Alertar produtores e autoridades<br>
-•	Promover práticas sustentáveis<br>
 
-<br>
+Objetivos:
+
+Monitorar propriedades rurais em tempo real.
+Calcular a capacidade de absorção do solo.
+Prever riscos de enchentes.
+Alertar produtores e autoridades.
+Promover práticas sustentáveis.
 🎛️ Funcionalidades Principais:
-<br>
-📊 Monitoramento Real-timeSensores IoT coletam dados 24/7✅<br>
-🧠 Cálculos InteligentesAlgoritmos de risco e capacidade✅<br>
-🚨 Alertas AutomáticosTriggers baseados em condições críticas✅<br>
-📈 Dashboards ExecutivosMétricas e KPIs em tempo real✅<br>
-📊 Métricas Calculadas<br><br>
 
-🗄️ Estrutura do Banco:<br>
-Oracle Database (Dados Estruturados)<br>
+📊 Monitoramento Real-time: Sensores IoT coletam dados 24/7 ✅
+🧠 Cálculos Inteligentes: Algoritmos de risco e capacidade ✅
+🚨 Alertas Automáticos: (Suportados pela lógica da package e implementados via Triggers) ✅
+📈 Dashboards Executivos: Métricas e KPIs em tempo real (gerados pelas procedures da package) ✅
+📊 Métricas Calculadas: (Disponibilizadas pelas funções e procedures da package)
+🗄️ Estrutura do Banco:
 
-8 Tabelas Principais (Normalizadas 3FN)<br>
-Package PKG_WATERWISE com 29 procedures<br>
-3 Triggers automáticos<br>
+Oracle Database (Dados Estruturados)
+8 Tabelas Principais (Normalizadas em 3FN)
+Package PKG_WATERWISE_SLIM com aproximadamente 20 procedures e funções essenciais (incluindo CRUDs, cálculos e relatórios).
+3 Triggers automáticos (que podem interagir com a lógica da package).
+MongoDB (Dados Não-Estruturados)
+activity_logs - Logs de atividades do sistema e interações.
+reports - Armazenamento de relatórios gerados (potencialmente a partir da package Oracle) ou dados para relatórios complexos.
+images - Imagens de satélite, fotos de campo com metadados.
+🌾 Para Produtores Rurais:
 
-MongoDB (Dados Não-Estruturados)<br>
-
-activity_logs - Logs de atividades<br>
-reports - Relatórios gerados<br>
-images - Imagens e metadados<br>
-
-🌾 Para Produtores Rurais<br>
-
-📱 Dashboard pessoal com métricas da fazenda<br>
-🚨 Alertas quando necessário<br>
-📈 Rankings de sustentabilidade<br>
-
-
-<div align="center">
-💧 <strong>WaterWise: Cada Gota Importa, Cada Metro Conta</strong><br>
-Equipe WaterWise (2TDSPS)<br>
-Felipe Amador RM: 553528<br>
-Leonardo de Oliveira RM: 554024<br>
-Sara Sousa RM: 552656<br>
-• FIAP 2025
-</div>
+📱 Dashboard pessoal com métricas da fazenda.
+🚨 Alertas sobre riscos e necessidade de ações.
+📈 Rankings de sustentabilidade e boas práticas.
