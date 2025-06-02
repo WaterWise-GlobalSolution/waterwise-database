@@ -1,4 +1,4 @@
-CREATE OR REPLACE PACKAGE PKG_WATERWISE_SLIM IS
+CREATE OR REPLACE PACKAGE PKG_WATERWISE IS
 
 -- ============================================================================
 -- 1. PROCEDURES CRUD
@@ -112,10 +112,10 @@ CREATE OR REPLACE PACKAGE PKG_WATERWISE_SLIM IS
     PROCEDURE INICIALIZAR_SISTEMA;
     PROCEDURE VALIDAR_INTEGRIDADE_DADOS;
 
-END PKG_WATERWISE_SLIM;
+END PKG_WATERWISE;
 /
 
-CREATE OR REPLACE PACKAGE BODY PKG_WATERWISE_SLIM IS
+CREATE OR REPLACE PACKAGE BODY PKG_WATERWISE IS
 
 -- ============================================================================
 -- 1. IMPLEMENTAÇÃO DAS PROCEDURES CRUD
@@ -989,22 +989,22 @@ CREATE OR REPLACE PACKAGE BODY PKG_WATERWISE_SLIM IS
     BEGIN
         DBMS_OUTPUT.PUT_LINE('=== INICIALIZANDO SISTEMA WATERWISE ===');
         BEGIN
-            PKG_WATERWISE_SLIM.CRUD_TIPO_SENSOR('INSERT', v_id_temp, 'Sensor de Umidade do Solo', 'Sensor capacitivo para medição da umidade do solo', '%', 0, 100);
-            PKG_WATERWISE_SLIM.CRUD_TIPO_SENSOR('INSERT', v_id_temp, 'Sensor de Temperatura', 'Sensor digital para medição da temperatura ambiente', '°C', -40, 85);
-            PKG_WATERWISE_SLIM.CRUD_TIPO_SENSOR('INSERT', v_id_temp, 'Sensor de Precipitação', 'Pluviômetro digital para medição de chuva', 'mm', 0, 500);
+            PKG_WATERWISE.CRUD_TIPO_SENSOR('INSERT', v_id_temp, 'Sensor de Umidade do Solo', 'Sensor capacitivo para medição da umidade do solo', '%', 0, 100);
+            PKG_WATERWISE.CRUD_TIPO_SENSOR('INSERT', v_id_temp, 'Sensor de Temperatura', 'Sensor digital para medição da temperatura ambiente', '°C', -40, 85);
+            PKG_WATERWISE.CRUD_TIPO_SENSOR('INSERT', v_id_temp, 'Sensor de Precipitação', 'Pluviômetro digital para medição de chuva', 'mm', 0, 500);
         EXCEPTION WHEN OTHERS THEN DBMS_OUTPUT.PUT_LINE('Tipos de sensores já existem ou erro: ' || SQLERRM); END;
         BEGIN
-            PKG_WATERWISE_SLIM.CRUD_NIVEL_SEVERIDADE('INSERT', v_id_temp, 'BAIXO', 'Situação sob controle, monitoramento rotineiro', 'Continuar monitoramento regular. Verificar tendências.');
-            PKG_WATERWISE_SLIM.CRUD_NIVEL_SEVERIDADE('INSERT', v_id_temp, 'MEDIO', 'Situação requer atenção, monitoramento intensificado', 'Aumentar frequência de monitoramento. Verificar causas.');
-            PKG_WATERWISE_SLIM.CRUD_NIVEL_SEVERIDADE('INSERT', v_id_temp, 'ALTO', 'Situação preocupante, ação necessária', 'Ação corretiva imediata. Contatar responsável técnico.');
-            PKG_WATERWISE_SLIM.CRUD_NIVEL_SEVERIDADE('INSERT', v_id_temp, 'CRITICO', 'Situação crítica, ação imediata necessária', 'Intervenção imediata. Contatar especialista. Implementar medidas corretivas urgentes.');
+            PKG_WATERWISE.CRUD_NIVEL_SEVERIDADE('INSERT', v_id_temp, 'BAIXO', 'Situação sob controle, monitoramento rotineiro', 'Continuar monitoramento regular. Verificar tendências.');
+            PKG_WATERWISE.CRUD_NIVEL_SEVERIDADE('INSERT', v_id_temp, 'MEDIO', 'Situação requer atenção, monitoramento intensificado', 'Aumentar frequência de monitoramento. Verificar causas.');
+            PKG_WATERWISE.CRUD_NIVEL_SEVERIDADE('INSERT', v_id_temp, 'ALTO', 'Situação preocupante, ação necessária', 'Ação corretiva imediata. Contatar responsável técnico.');
+            PKG_WATERWISE.CRUD_NIVEL_SEVERIDADE('INSERT', v_id_temp, 'CRITICO', 'Situação crítica, ação imediata necessária', 'Intervenção imediata. Contatar especialista. Implementar medidas corretivas urgentes.');
         EXCEPTION WHEN OTHERS THEN DBMS_OUTPUT.PUT_LINE('Níveis de severidade já existem ou erro: ' || SQLERRM); END;
         BEGIN
-            PKG_WATERWISE_SLIM.CRUD_NIVEL_DEGRADACAO_SOLO('INSERT', v_id_temp, 'EXCELENTE', 'Solo em excelente estado de conservação', 1, 'Manter práticas atuais. Monitoramento preventivo.');
-            PKG_WATERWISE_SLIM.CRUD_NIVEL_DEGRADACAO_SOLO('INSERT', v_id_temp, 'BOM', 'Solo em bom estado, pequenos sinais de desgaste', 2, 'Aplicar cobertura vegetal. Reduzir pisoteio.');
-            PKG_WATERWISE_SLIM.CRUD_NIVEL_DEGRADACAO_SOLO('INSERT', v_id_temp, 'MODERADO', 'Degradação moderada, perda média de fertilidade', 3, 'Análise de solo. Correção química. Rotação de culturas.');
-            PKG_WATERWISE_SLIM.CRUD_NIVEL_DEGRADACAO_SOLO('INSERT', v_id_temp, 'RUIM', 'Degradação avançada, perda significativa de fertilidade', 4, 'Recuperação intensiva. Análise detalhada. Plantio de recuperação.');
-            PKG_WATERWISE_SLIM.CRUD_NIVEL_DEGRADACAO_SOLO('INSERT', v_id_temp, 'CRITICO', 'Degradação crítica, solo quase improdutivo', 5, 'Recuperação emergencial. Projeto técnico especializado.');
+            PKG_WATERWISE.CRUD_NIVEL_DEGRADACAO_SOLO('INSERT', v_id_temp, 'EXCELENTE', 'Solo em excelente estado de conservação', 1, 'Manter práticas atuais. Monitoramento preventivo.');
+            PKG_WATERWISE.CRUD_NIVEL_DEGRADACAO_SOLO('INSERT', v_id_temp, 'BOM', 'Solo em bom estado, pequenos sinais de desgaste', 2, 'Aplicar cobertura vegetal. Reduzir pisoteio.');
+            PKG_WATERWISE.CRUD_NIVEL_DEGRADACAO_SOLO('INSERT', v_id_temp, 'MODERADO', 'Degradação moderada, perda média de fertilidade', 3, 'Análise de solo. Correção química. Rotação de culturas.');
+            PKG_WATERWISE.CRUD_NIVEL_DEGRADACAO_SOLO('INSERT', v_id_temp, 'RUIM', 'Degradação avançada, perda significativa de fertilidade', 4, 'Recuperação intensiva. Análise detalhada. Plantio de recuperação.');
+            PKG_WATERWISE.CRUD_NIVEL_DEGRADACAO_SOLO('INSERT', v_id_temp, 'CRITICO', 'Degradação crítica, solo quase improdutivo', 5, 'Recuperação emergencial. Projeto técnico especializado.');
         EXCEPTION WHEN OTHERS THEN DBMS_OUTPUT.PUT_LINE('Níveis de degradação já existem ou erro: ' || SQLERRM); END;
         DBMS_OUTPUT.PUT_LINE('✅ Sistema WaterWise inicializado com sucesso!');
     EXCEPTION WHEN OTHERS THEN DBMS_OUTPUT.PUT_LINE('Erro na inicialização: ' || SQLERRM); ROLLBACK;
@@ -1031,5 +1031,5 @@ CREATE OR REPLACE PACKAGE BODY PKG_WATERWISE_SLIM IS
     EXCEPTION WHEN OTHERS THEN DBMS_OUTPUT.PUT_LINE('Erro na validação: ' || SQLERRM);
     END VALIDAR_INTEGRIDADE_DADOS;
 
-END PKG_WATERWISE_SLIM;
+END PKG_WATERWISE;
 /

@@ -8,7 +8,7 @@ OK 2 Criação e Inserção de Dados – 15 pontos
 ------------------------------------------------------------------------------------------------------------
 OK 3 Desenvolvimento de Package em PL/SQL – 30 pontos
 Toda a lógica programada deve estar dentro de uma única PACKAGE no Oracle
-Incluindo obrigatoriamente:
+Incluindo obrigatoriamente:banco de dados
 • Procedures(inserção, alteração, exclusão) ---- FEITO 
 • Funções(ex: retorno de pontuação, ranking, risco) ---- FEITO 
 • Triggers (validação automática) ---- FEITO

@@ -28,7 +28,7 @@ SELECT * FROM GS_WW_PRODUTOR_RURAL ORDER BY id_produtor DESC;
 
 ---------------------------------------------------------------------------------------------------------------------------------------
 DECLARE
-  v_id_produtor_para_atualizar GS_WW_PRODUTOR_RURAL.id_produtor%TYPE := 20; 
+  v_id_produtor_para_atualizar GS_WW_PRODUTOR_RURAL.id_produtor%TYPE := 21; 
 BEGIN
   DBMS_OUTPUT.PUT_LINE('--- INICIANDO UPDATE (ATUALIZAÇÃO) PARA O PRODUTOR ID: ' || v_id_produtor_para_atualizar || ' ---');
   IF v_id_produtor_para_atualizar IS NULL THEN
@@ -57,7 +57,7 @@ END;
 ---------------------------------------------------------------------------------------------------------------------------------------
 
 DECLARE
-  v_id_produtor_para_deletar GS_WW_PRODUTOR_RURAL.id_produtor%TYPE := 20; 
+  v_id_produtor_para_deletar GS_WW_PRODUTOR_RURAL.id_produtor%TYPE := 21; 
 BEGIN
   DBMS_OUTPUT.PUT_LINE('--- INICIANDO DELETE (EXCLUSÃO) PARA O PRODUTOR ID: ' || v_id_produtor_para_deletar || ' ---');
   IF v_id_produtor_para_deletar IS NULL THEN
