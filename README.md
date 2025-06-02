@@ -31,7 +31,7 @@ Promover práticas sustentáveis.<br>
 <br>
 Oracle Database (Dados Estruturados)<br>
 8 Tabelas Principais (Normalizadas em 3FN)<br>
-Package PKG_WATERWISE_SLIM com aproximadamente 20 procedures e funções essenciais (incluindo CRUDs, cálculos e relatórios).<br>
+Package PKG_WATERWISE com aproximadamente 20 procedures e funções essenciais (incluindo CRUDs, cálculos e relatórios).<br>
 3 Triggers automáticos (que podem interagir com a lógica da package).<br><br>
 MongoDB (Dados Não-Estruturados)<br>
 activity_logs - Logs de atividades do sistema e interações.<br>
