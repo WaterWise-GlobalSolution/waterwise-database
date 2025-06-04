@@ -1,4 +1,4 @@
-🌊 WaterWise - Sistema Inteligente de Prevenção a Enchentes<br>
+##  🌊 WaterWise - Sistema Inteligente de Prevenção a Enchentes<br>
 "Transformando propriedades rurais em guardiões inteligentes contra enchentes urbanas"
 <br><br>
 Conceito:<br>
@@ -44,8 +44,11 @@ images - Imagens de satélite, fotos de campo com metadados.<br><br>
 📈 Rankings de sustentabilidade e boas práticas.<br><br>
 <div align="center">
 
-  ---
-##💧 <strong>WaterWise: Cada Gota Importa, Cada Metro Conta</strong><br>
+---
+  
+## 💧 <strong>WaterWise: Cada Gota Importa, Cada Metro Conta</strong><br>
+
+---
 
 ## 👥 Equipe de Desenvolvimento - Turma 2TDSPS
 
