@@ -44,10 +44,17 @@ images - Imagens de satélite, fotos de campo com metadados.<br><br>
 📈 Rankings de sustentabilidade e boas práticas.<br><br>
 <div align="center">
 💧 <strong>WaterWise: Cada Gota Importa, Cada Metro Conta</strong><br>
-Equipe WaterWise (2TDSPS)<br>
-• Felipe Amador RM: 553528<br>
-• Leonardo de Oliveira RM: 554024<br>
-• Sara Sousa RM: 552656<br>
+---
+
+## 👥 Equipe de Desenvolvimento - Turma 2TDSPS
+
+| Nome                   | RM     |
+|------------------------|--------|
+| Felipe Amador          | 553528 |
+| Leonardo de Oliveira   | 554024 |
+| Sara Sousa             | 552656 |
+
+---
 
   • FIAP 2025
 </div>
