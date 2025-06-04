@@ -43,8 +43,9 @@ images - Imagens de satélite, fotos de campo com metadados.<br><br>
 🚨 Alertas sobre riscos e necessidade de ações.<br>
 📈 Rankings de sustentabilidade e boas práticas.<br><br>
 <div align="center">
-💧 <strong>WaterWise: Cada Gota Importa, Cada Metro Conta</strong><br>
----
+
+  ---
+##💧 <strong>WaterWise: Cada Gota Importa, Cada Metro Conta</strong><br>
 
 ## 👥 Equipe de Desenvolvimento - Turma 2TDSPS
 
