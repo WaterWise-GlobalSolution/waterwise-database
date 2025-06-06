@@ -63,6 +63,7 @@ images - Imagens de satélite, fotos de campo com metadados.<br><br>
 📱 Dashboard pessoal com métricas da fazenda.<br>
 🚨 Alertas sobre riscos e necessidade de ações.<br>
 📈 Rankings de sustentabilidade e boas práticas.<br><br>
+
 <div align="center">
 
 ---
@@ -71,5 +72,7 @@ images - Imagens de satélite, fotos de campo com metadados.<br><br>
 
 ---
 
-  • FIAP 2025
+**Global Solution 2025 - FIAP**  
+*Desenvolvido com 💙 pela equipe WaterWise*
+
 </div>
