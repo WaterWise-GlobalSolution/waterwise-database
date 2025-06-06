@@ -1,4 +1,25 @@
-##  🌊 WaterWise - Sistema Inteligente de Prevenção a Enchentes<br>
+# 🌊 WaterWise - Sistema Inteligente de Prevenção a Enchentes
+
+## 📚 Trabalho Acadêmico - Global Solution 2025
+
+**Disciplina:** MASTERING RELATIONAL AND NON-RELATIONAL DATABASE  
+**Instituição:** FIAP - Faculdade de Informática e Administração Paulista  
+**Curso:** Análise e Desenvolvimento de Sistemas 
+**Semestre:** 2º Semestre 2025  
+
+---
+
+## 👥 Equipe de Desenvolvimento - Turma 2TDSPS
+
+| Nome                 | RM     |
+| -------------------- | ------ |
+| Felipe Amador        | 553528 |
+| Leonardo de Oliveira | 554024 |
+| Sara Sousa           | 552656 |
+
+---
+
+## O Projeto<br>
 "Transformando propriedades rurais em guardiões inteligentes contra enchentes urbanas"
 <br><br>
 Conceito:<br>
@@ -47,16 +68,6 @@ images - Imagens de satélite, fotos de campo com metadados.<br><br>
 ---
   
 ## 💧 <strong>WaterWise: Cada Gota Importa, Cada Metro Conta</strong><br>
-
----
-
-## 👥 Equipe de Desenvolvimento - Turma 2TDSPS
-
-| Nome                   | RM     |
-|------------------------|--------|
-| Felipe Amador          | 553528 |
-| Leonardo de Oliveira   | 554024 |
-| Sara Sousa             | 552656 |
 
 ---
 
