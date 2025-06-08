@@ -1,3 +1,25 @@
+# Ecossistema WaterWise
+
+"A enchente que alaga uma avenida pode começar com uma gota que o solo seco da zona rural não absorveu. Com WaterWise, cada metro de terra volta a ser uma esponja contra desastres."
+
+## Visão Geral do Projeto
+
+A **WaterWise** é um ecossistema tecnológico integrado que previne enchentes urbanas através do monitoramento inteligente de propriedades rurais.
+
+### Repositório Principal
+Para uma compreensão abrangente do projeto e sua arquitetura, acesse nosso repositório de overview:
+
+**[WaterWise - Visão Geral do Projeto](https://github.com/WaterWise-GlobalSolution/waterwise-overview)**
+
+## Organização GitHub
+
+Para melhor organização dos entregáveis e centralização de todas as soluções do ecossistema WaterWise, criamos uma organização dedicada no GitHub.
+
+### Acesse Nossa Organização
+**[WaterWise Organization](https://github.com/WaterWise-GlobalSolution)**
+
+---
+
 # 🌊 WaterWise - Sistema Inteligente de Prevenção a Enchentes
 
 ## 📚 Trabalho Acadêmico - Global Solution 2025
